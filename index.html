@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Google Searches</title>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .search {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 2px 2px #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        .search h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .search ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .search li {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Google Searches</h1>
+    <div class="search">
+        <h2>Here are the top searches on Google right now:</h2>
+        <ul>
+            {% for search in top_searches %}
+            <li>{{ search }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
