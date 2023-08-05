@@ -33,7 +33,7 @@ def get_top_searches():
 
     # Extract the titles of the top 10 trending searches
     titles = soup.find_all('title')[1:]
-    top_searches = [title.text for title in titles][:10]
+    top_searches = [title.text for title in titles][:20]
 
     # Return the top searches as a string separated by commas
     return ','.join(top_searches)
